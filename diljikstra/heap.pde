@@ -100,11 +100,11 @@ class minHeap
      neighb.add(matrix[tempx][tempy]);
    tempx=x-1;
    tempy=y;
-   if(tempx>0 && !this.isObs(tempx,tempy,o))
+   if(tempx>=0 && !this.isObs(tempx,tempy,o))
      neighb.add(matrix[tempx][tempy]);
    tempx=x;
    tempy=y-1;
-   if(tempy>0 && !this.isObs(tempx,tempy,o))
+   if(tempy>=0 && !this.isObs(tempx,tempy,o))
       neighb.add(matrix[tempx][tempy]);
    tempx=x+1;
    tempy=y+1;
@@ -112,15 +112,15 @@ class minHeap
      neighb.add(matrix[tempx][tempy]);
    tempx=x-1;
    tempy=y-1;
-   if(tempx>0 && tempy>0 && !this.isObs(tempx,tempy,o))
+   if(tempx>=0 && tempy>=0 && !this.isObs(tempx,tempy,o))
      neighb.add(matrix[tempx][tempy]);
    tempx=x+1;
    tempy=y-1;
-   if(tempx<width/scl && tempy>0 && !this.isObs(tempx,tempy,o))
+   if(tempx<width/scl && tempy>=0 && !this.isObs(tempx,tempy,o))
      neighb.add(matrix[tempx][tempy]);
    tempx=x-1;
    tempy=y+1;
-   if(tempy<height/scl && tempx>0 && !this.isObs(tempx,tempy,o))
+   if(tempy<height/scl && tempx>=0 && !this.isObs(tempx,tempy,o))
      neighb.add(matrix[tempx][tempy]);
    return neighb;
   }
